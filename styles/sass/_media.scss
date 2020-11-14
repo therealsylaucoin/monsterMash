@@ -1,8 +1,8 @@
 //remove hovers
 // (hover: none) 
 
-//Tablet 
-@media (max-width: 768px) {
+//Tablet - ipad pro
+@media only screen and (max-width: 1366px) {
     .desktop {
         display: none;
     }
