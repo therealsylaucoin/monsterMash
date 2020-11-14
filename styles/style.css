@@ -252,7 +252,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #FBFEF9;
+  color: #fbfef9;
   font-weight: 600;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(27, 0, 32, 0.8))), url(../assets/scaryBackground.jpg);
   background-image: linear-gradient(rgba(27, 0, 32, 0.8)), url(../assets/scaryBackground.jpg);
@@ -294,14 +294,14 @@ button {
   margin: 10px;
   background-color: #500060;
   border: 2px solid #500060;
-  color: #FBFEF9;
+  color: #fbfef9;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   font-size: 1.8rem;
   cursor: pointer;
 }
 
-button:hover, buttonfocus {
+button:hover, button:focus-within {
   background-color: #bb00e0;
   color: #0f0a0a;
 }
@@ -433,7 +433,8 @@ footer a {
 }
 
 .menu ul li:hover .details,
-.menu ul li:focus .details {
+.menu ul li:focus .details,
+.menu ul li:focus-within .details {
   display: block;
 }
 
@@ -464,6 +465,10 @@ footer a {
   font-weight: 400;
 }
 
+.menu ul li .details:focus, .menu ul li .details:focus-within {
+  display: block;
+}
+
 .menu ul li .first {
   border-radius: 6px 0 0 0;
 }
@@ -475,7 +480,7 @@ footer a {
 .gameBoard {
   visibility: hidden;
   margin: 100px 0;
-  background-color: #FBFEF9;
+  background-color: rgba(251, 254, 255, 0.7);
   border-radius: 10px;
   margin: 0 auto;
   width: calc(100% + (2.5px * 6));
@@ -494,6 +499,7 @@ footer a {
           align-items: center;
   padding: 50px;
   color: #500060;
+  position: relative;
 }
 
 .gameBoard .board {
@@ -523,21 +529,34 @@ footer a {
   border: 4px solid transparent;
 }
 
-.gameBoard .board img:hover, .gameBoard .board img:focus {
+.gameBoard .board img:hover, .gameBoard .board img:focus-within {
   border: 4px solid #a6f002;
+}
+
+.gameBoard .matchMessage {
+  padding: 20px;
+  max-width: 300px;
 }
 
 .gameBoard .playAgain {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  z-index: 20;
-  text-align: center;
   padding: 50px;
-  background-color: rgba(166, 240, 2, 0.9);
+}
+
+.gameBoard .matchMessage,
+.gameBoard .playAgain {
+  background-color: #a6f002;
   border: 4px solid #bb00e0;
   border-radius: 10px;
+  z-index: 20;
+  text-align: center;
   display: none;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
 }
 
 .lightMode {
@@ -582,7 +601,7 @@ footer a {
 }
 
 .lightMode .menu ul div .diffBackground h2 {
-  color: #FBFEF9;
+  color: #fbfef9;
 }
 
 .lightMode button {

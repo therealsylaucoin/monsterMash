@@ -4,7 +4,7 @@ $purplePrimary: #500060;
 $green: #a6f002;
 $black: #0f0a0a;
 $background: #0f0a0a;
-$lightWhite: #FBFEF9;
+$lightWhite: #fbfef9;
 
 //Colors! For Light Theme
 $lightPurple: #6E9EEB;
@@ -88,7 +88,7 @@ button {
     cursor: pointer;
 
     &:hover,
-    &focus {
+    &:focus-within {
         background-color: $purpleSecondary;
         color: $black;
     }

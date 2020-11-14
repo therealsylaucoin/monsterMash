@@ -40,7 +40,9 @@ $('.modeSwitch').on('click', function(){
   app.score = 0;
   $('.currentScore').text(app.score);
   //empty the board
-  $('.board').empty()
+  $('.board').empty();
+  //hide play again message, since we're refreshign the board
+  $('.playAgain').hide();
   //Call the create board function inside here, because we want to create the board with the mixed array
   app.mixCards();
 })
@@ -77,6 +79,9 @@ app.createBoard = function() {
             .attr('data-name', app.cardsArray[i].name)
             //add the index from the array
             .attr('data-id', i)
+            //**Note to the reviewer - I added the tab index in hope to make the card game accessible by keyboard. I was unsuccessful with a few different attempts (keyDown, onclick="handleBtnClick()" onKeyDown="handleBtnKeyDown() and more.) Any accessible feedback and tips around this type of app/games is welcome! Thank you!
+            //add a tab index
+            .attr('tabindex', 0)
             //set alt text for images as the card name
             .attr('alt', app.cardsArray[i].name)
             //add a class of unmatched (which will be removed as the player makes pairs to check if match is won)
@@ -223,81 +228,88 @@ $(function(){
     app.init(); 
 });
 
+
+//Stretch Goal #4 - Different modes: easy, normal and hard
+// app.difficultyLevelChosen = () => {
+
+//   app.cardsArray = app.cardsArray.slice(0,2);
+// }
+
 //1. Create arrays - continued
 // 	a) Each card must be in the array twice.
 // 	b) Each card will have a name and img src path
 app.cardsArrayScary = [
   {
     name: 'Dracula',
-    imgSrc: './assets/scary/Monster1.png'
+    imgSrc: './assets/scary/Monster1.jpg'
   },
   {
     name: 'Dracula',
-    imgSrc: './assets/scary/Monster1.png'
+    imgSrc: './assets/scary/Monster1.jpg'
   },
   {
     name: 'Dracula Daughter',
-    imgSrc: './assets/scary/Monster2.png'
+    imgSrc: './assets/scary/Monster2.jpg'
   },
   {
     name: 'Dracula Daughter',
-    imgSrc: './assets/scary/Monster2.png'
+    imgSrc: './assets/scary/Monster2.jpg'
   },
     // {
     // name: 'Frankenstein',
-    // imgSrc: './assets/scary/Monster3.png'
+    // imgSrc: './assets/scary/Monster3.jpg'
     // },
     // {
     // name: 'Frankenstein',
-    // imgSrc: './assets/scary/Monster3.png'
+    // imgSrc: './assets/scary/Monster3.jpg'
     // },
     // {
     // name: 'Invisible Woman',
-    // imgSrc: './assets/scary/Monster4.png'
+    // imgSrc: './assets/scary/Monster4.jpg'
     // },
     // {
     // name: 'Invisible Woman',
-    // imgSrc: './assets/scary/Monster4.png'
+    // imgSrc: './assets/scary/Monster4.jpg'
     // },
     // {
     // name: 'Mummy',
-    // imgSrc: './assets/scary/Monster5.png'
+    // imgSrc: './assets/scary/Monster5.jpg'
     // },
     // {
     // name: 'Mummy',
-    // imgSrc: './assets/scary/Monster5.png'
+    // imgSrc: './assets/scary/Monster5.jpg'
     // },
     // {
     // name: 'Wolfman',
-    // imgSrc: './assets/scary/Monster6.png'
+    // imgSrc: './assets/scary/Monster6.jpg'
     // },
     // {
     // name: 'Wolfman',
-    // imgSrc: './assets/scary/Monster6.png'
+    // imgSrc: './assets/scary/Monster6.jpg'
     // },
     // {
     // name: 'Invisible Man',
-    // imgSrc: './assets/scary/Monster7.png'
+    // imgSrc: './assets/scary/Monster7.jpg'
     // },
     // {
     // name: 'Invisible Man',
-    // imgSrc: './assets/scary/Monster7.png'
+    // imgSrc: './assets/scary/Monster7.jpg'
     // },
     // {
     // name: 'Creature from the black Laggoon',
-    // imgSrc: './assets/scary/Monster8.png'
+    // imgSrc: './assets/scary/Monster8.jpg'
     // },
     // {
     // name: 'Creature from the black Laggoon',
-    // imgSrc: './assets/scary/Monster8.png'
+    // imgSrc: './assets/scary/Monster8.jpg'
     // },
     // {
     // name: 'Bride of Frankenstein',
-    // imgSrc: './assets/scary/Monster9.png'
+    // imgSrc: './assets/scary/Monster9.jpg'
     // },
     // {
     // name: 'Bride of Frankenstein',
-    // imgSrc: './assets/scary/Monster9.png'
+    // imgSrc: './assets/scary/Monster9.jpg'
     // },
 ]
 
