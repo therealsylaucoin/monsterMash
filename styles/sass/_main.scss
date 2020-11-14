@@ -1,0 +1,168 @@
+//menu (4 x 4 square) section
+.menu {
+    padding-top: 60px;
+    height: calc(80vh - 35px);
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    
+
+    .info {
+        margin: 10px;
+    }
+
+    ul {
+        border: 4px solid $purpleSecondary;
+        border-radius: 10px;
+        height: 492px;
+        width: 492px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: $purplePrimary;
+
+        div{
+            display: flex;
+            // width: 100%;
+
+            .diffBackground {
+                background-color: $green;
+
+                &:first-of-type {
+                    border-radius: 0 0 0 6px;
+
+                    .details{
+                        text-align: center;
+                        border-radius: 0 0 0 6px;
+                    }
+                }
+
+                &:last-of-type {
+                    border-radius: 0 6px 0 0;
+
+                    .details {
+                        border-radius: 0 6px 0 0;
+                    }
+                }
+
+                .letter {
+                    color: $purplePrimary;
+                }
+
+                h2 {
+                    color: $black;
+                }
+            }
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            // flex: 1 0 484px;
+            width: 242px;
+            height: 242px;
+            text-align: center;
+            position: relative;
+            &:hover .details,
+            &:focus .details{
+                display: block;
+            }
+            &:hover h2,
+            &:focus h2 {
+                display: none;
+            }
+
+            .letter {
+                font-family: $monster;
+                font-size: 10rem;
+                color: $green;
+                text-shadow: 3px 0px 0px  $purpleSecondary;
+            }
+
+            .details {
+                display:none;
+                height: 100%;
+                z-index: 10;
+                position: absolute;
+                top: 0;
+                background-color: white;
+                color: $black;
+                font-size: 1.8rem;
+                opacity: 0.95;
+                line-height: 1.3;
+                text-align: left;
+                font-weight: 400;
+            }
+
+            .first{
+                border-radius:  6px 0 0 0;
+            }
+
+            .last {
+                border-radius:  0 0 6px 0;
+            }
+        }
+    }
+}
+
+//Game board section
+.gameBoard {
+    visibility: hidden;
+    margin: 100px 0;
+    background-color: $lightWhite;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: calc(100% + (2.5px * 6));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    color: $purplePrimary;
+
+        .board {
+            margin: 0 auto;
+            // width: calc(80vw + (2.5px * 6));
+            // height: 85vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            // display: grid;
+            // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            // grid-template-rows: 1fr 1fr 1fr;
+
+            img {
+                border-radius: 10px;
+                height: 15vw;
+                width: 10vw;
+                min-height:150px;
+                min-width: 100px;
+                max-height:300px;
+                max-width: 200px;
+                margin: 2.5px;
+                border: 4px solid transparent;
+
+        
+                &:hover,
+                &:focus {
+                    border: 4px solid $green;
+                }
+            }
+        }
+
+    .playAgain {
+        width: fit-content;
+        z-index: 20;
+        text-align: center;
+        padding: 50px;
+        background-color: rgba(166, 240, 2, 0.9);
+        border: 4px solid $purpleSecondary;
+        border-radius: 10px;
+        display: none;
+    }
+}
+

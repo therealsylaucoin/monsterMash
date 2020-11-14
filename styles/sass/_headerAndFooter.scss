@@ -1,0 +1,40 @@
+header {
+    text-align: center;
+    // height: 20vh;
+    margin-bottom: 100px;
+    
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%
+    }
+
+    .friendly {
+        display: none;
+    }
+
+    h1 {
+        font-family: $monster;
+        font-size: 10rem;
+        margin: 0px;
+        padding-top: 30px;
+        color: $green;
+        text-shadow: 3px 0px 0px $purpleSecondary;
+        // position: fixed;
+        // background-color: rgba($color: $purplePrimary, $alpha: 0.7);
+        // z-index: 20;
+    }
+}
+
+
+
+//footer section
+footer {
+    text-align: center;
+    font-size: 1.6rem;
+    height: 35px;
+
+    a {
+        color: $green;
+    }
+}

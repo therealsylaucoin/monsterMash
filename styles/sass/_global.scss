@@ -1,0 +1,99 @@
+// Colors! Dark Theme
+$purpleSecondary: #bb00e0;
+$purplePrimary: #500060;
+$green: #a6f002;
+$black: #0f0a0a;
+$background: #0f0a0a;
+$lightWhite: #FBFEF9;
+
+//Colors! For Light Theme
+$lightPurple: #6E9EEB;
+$lightPurpleSecondary: #f55d3e;
+$lightPurplePrimary: #f7cb15;
+$black: #0f0a0a;
+$lightBackground: #FBFEF9;
+$lightBlue:#f55d3e;
+$navy: #022f40;
+
+// Font families!
+$monster: 'Creepster', cursive;
+$primary: 'Source Sans Pro', sans-serif;
+
+//Style stripping
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $primary;
+    font-size: 2rem;
+    // background-color: $background;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $lightWhite;
+    font-weight: 600;
+    background-image: linear-gradient(rgba(27, 0, 32, .8)), url(../assets/scaryBackground.jpg);
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+h2 {
+    font-family: $primary;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.wrapper {
+    max-width: 1280px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+//Global styles!
+p {
+    padding: 10px;
+}
+
+button {
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 10px;
+    background-color: $purplePrimary;
+    border: 2px solid $purplePrimary;
+    color: $lightWhite;
+    font-family: $primary;
+    font-weight: 600;
+    font-size: 1.8rem;
+    cursor: pointer;
+
+    &:hover,
+    &focus {
+        background-color: $purpleSecondary;
+        color: $black;
+    }
+}
+
+.attributions {
+    font-weight: 600;
+}
