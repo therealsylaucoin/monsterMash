@@ -570,6 +570,7 @@ footer a {
   border-radius: 10px;
   z-index: 20;
   text-align: center;
+  display: none;
   position: absolute;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
