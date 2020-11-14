@@ -59,7 +59,8 @@
             }
 
             img:hover,
-            img:focus {
+            img:focus,
+            img:focus-within {
                 border: none;
             }
         }

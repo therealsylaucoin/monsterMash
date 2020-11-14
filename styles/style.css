@@ -737,7 +737,8 @@ footer a {
     border: none;
   }
   .gameBoard .board img:hover,
-  .gameBoard .board img:focus {
+  .gameBoard .board img:focus,
+  .gameBoard .board img:focus-within {
     border: none;
   }
 }
