@@ -319,6 +319,10 @@ button:hover, button:focus {
   font-size: 4rem;
 }
 
+.mobile {
+  display: none;
+}
+
 header {
   text-align: center;
   margin-bottom: 100px;
@@ -355,12 +359,12 @@ footer a {
 
 .menu {
   padding-top: 60px;
-  height: calc(80vh - 35px);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   text-align: center;
   margin: 0 auto;
+  padding-bottom: 100px;
 }
 
 .menu .info {
@@ -476,7 +480,7 @@ footer a {
   height: 100%;
   z-index: 10;
   position: absolute;
-  top: -1000px;
+  top: -10000px;
   background-color: white;
   color: #0f0a0a;
   font-size: 1.8rem;
@@ -578,7 +582,7 @@ footer a {
 }
 
 .song {
-  margin: 50px;
+  margin: 50px 0;
   text-align: center;
 }
 
@@ -643,14 +647,10 @@ footer a {
 }
 
 .lightMode button {
-  border-radius: 10px;
-  padding: 5px 10px;
-  margin: 10px;
   background-color: #50c5b7;
   border: 2px solid #50c5b7;
   color: #1c3144;
-  font-size: 1.8rem;
-  cursor: pointer;
+  margin: 0 auto;
 }
 
 .lightMode button a {
@@ -674,4 +674,126 @@ footer a {
 
 .lightMode footer a {
   color: #4482E5;
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    margin: 0 auto;
+  }
+  .menu ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 242px;
+    height: 242px;
+    text-align: center;
+    position: relative;
+  }
+  .menu ul li h2 {
+    display: none;
+  }
+  .menu ul li .letter {
+    font-family: "Creepster", cursive;
+    font-size: 10rem;
+    color: #a6f002;
+    text-shadow: 3px 0px 0px #bb00e0;
+  }
+  .menu ul li .details {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+  .gameBoard {
+    padding: 0 0 20px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu ul {
+    height: auto;
+    width: auto;
+    display: block;
+  }
+  .menu ul div .diffBackground:last-of-type .details {
+    border-radius: 0;
+  }
+  .menu ul div .diffBackground:first-of-type {
+    background-color: #500060;
+  }
+  .menu ul div .diffBackground:first-of-type .letter {
+    color: #a6f002;
+  }
+  .menu ul div .diffBackground:first-of-type .details {
+    border-radius: 0;
+  }
+  .menu ul li .details {
+    border-radius: none;
+  }
+  .menu ul li .first {
+    border-radius: 6px 6px 0 0;
+  }
+  .menu ul li .last {
+    border-radius: 0 0 6px 6px;
+  }
+  .menu ul li .letter:last-of-type {
+    color: #500060;
+  }
+  .menu ul li:last-of-type {
+    background-color: #a6f002;
+  }
+  .menu div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .lightMode .menu ul div .diffBackground:first-of-type {
+    background-color: #a6f002;
+  }
+  .lightMode .menu ul div .diffBackground:first-of-type .letter {
+    color: #4482E5;
+  }
+  .lightMode .menu ul li .letter:last-of-type {
+    color: #a6f002;
+  }
+  .lightMode .menu ul li:last-of-type {
+    background-color: #4482E5;
+  }
+}
+
+@media (max-width: 507px) {
+  header h1 {
+    font-size: 7rem;
+  }
+  .gameBoard .board img {
+    min-height: 100px;
+    min-width: 75px;
+  }
 }

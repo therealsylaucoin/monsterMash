@@ -233,13 +233,6 @@ $(function(){
     app.init(); 
 });
 
-
-//Stretch Goal #4 - Different modes: easy, normal and hard
-// app.difficultyLevelChosen = () => {
-
-//   app.cardsArray = app.cardsArray.slice(0,2);
-// }
-
 //1. Create arrays - continued
 // 	a) Each card must be in the array twice.
 // 	b) Each card will have a name and img src path
@@ -260,62 +253,62 @@ app.cardsArrayScary = [
     name: 'Dracula Daughter',
     imgSrc: './assets/scary/Monster2.jpg'
   },
-    // {
-    // name: 'Frankenstein',
-    // imgSrc: './assets/scary/Monster3.jpg'
-    // },
-    // {
-    // name: 'Frankenstein',
-    // imgSrc: './assets/scary/Monster3.jpg'
-    // },
-    // {
-    // name: 'Invisible Woman',
-    // imgSrc: './assets/scary/Monster4.jpg'
-    // },
-    // {
-    // name: 'Invisible Woman',
-    // imgSrc: './assets/scary/Monster4.jpg'
-    // },
-    // {
-    // name: 'Mummy',
-    // imgSrc: './assets/scary/Monster5.jpg'
-    // },
-    // {
-    // name: 'Mummy',
-    // imgSrc: './assets/scary/Monster5.jpg'
-    // },
-    // {
-    // name: 'Wolfman',
-    // imgSrc: './assets/scary/Monster6.jpg'
-    // },
-    // {
-    // name: 'Wolfman',
-    // imgSrc: './assets/scary/Monster6.jpg'
-    // },
-    // {
-    // name: 'Invisible Man',
-    // imgSrc: './assets/scary/Monster7.jpg'
-    // },
-    // {
-    // name: 'Invisible Man',
-    // imgSrc: './assets/scary/Monster7.jpg'
-    // },
-    // {
-    // name: 'Creature from the black Laggoon',
-    // imgSrc: './assets/scary/Monster8.jpg'
-    // },
-    // {
-    // name: 'Creature from the black Laggoon',
-    // imgSrc: './assets/scary/Monster8.jpg'
-    // },
-    // {
-    // name: 'Bride of Frankenstein',
-    // imgSrc: './assets/scary/Monster9.jpg'
-    // },
-    // {
-    // name: 'Bride of Frankenstein',
-    // imgSrc: './assets/scary/Monster9.jpg'
-    // },
+    {
+    name: 'Frankenstein',
+    imgSrc: './assets/scary/Monster3.jpg'
+    },
+    {
+    name: 'Frankenstein',
+    imgSrc: './assets/scary/Monster3.jpg'
+    },
+    {
+    name: 'Invisible Woman',
+    imgSrc: './assets/scary/Monster4.jpg'
+    },
+    {
+    name: 'Invisible Woman',
+    imgSrc: './assets/scary/Monster4.jpg'
+    },
+    {
+    name: 'Mummy',
+    imgSrc: './assets/scary/Monster5.jpg'
+    },
+    {
+    name: 'Mummy',
+    imgSrc: './assets/scary/Monster5.jpg'
+    },
+    {
+    name: 'Wolfman',
+    imgSrc: './assets/scary/Monster6.jpg'
+    },
+    {
+    name: 'Wolfman',
+    imgSrc: './assets/scary/Monster6.jpg'
+    },
+    {
+    name: 'Invisible Man',
+    imgSrc: './assets/scary/Monster7.jpg'
+    },
+    {
+    name: 'Invisible Man',
+    imgSrc: './assets/scary/Monster7.jpg'
+    },
+    {
+    name: 'Creature from the black Laggoon',
+    imgSrc: './assets/scary/Monster8.jpg'
+    },
+    {
+    name: 'Creature from the black Laggoon',
+    imgSrc: './assets/scary/Monster8.jpg'
+    },
+    {
+    name: 'Bride of Frankenstein',
+    imgSrc: './assets/scary/Monster9.jpg'
+    },
+    {
+    name: 'Bride of Frankenstein',
+    imgSrc: './assets/scary/Monster9.jpg'
+    },
 ]
 
 //Array for friendly
@@ -336,60 +329,67 @@ app.cardsArrayFriendly = [
     name: 'Yeti',
     imgSrc: './assets/friendly/Monster2.jpg'
   },
-  // {
-  //   name: 'Toothless The Dragon',
-  //   imgSrc: './assets/friendly/Monster3.jpg'
-  // },
-  // {
-  //   name: 'Toothless The Dragon',
-  //   imgSrc: './assets/friendly/Monster3.jpg'
-  // },
-  // {
-  //   name: 'Casper the Ghost',
-  //   imgSrc: './assets/friendly/Monster4.jpg'
-  // },
-  // {
-  //   name: 'Casper the Ghost',
-  //   imgSrc: './assets/friendly/Monster4.jpg'
-  // },
-  // {
-  //   name: 'Shrek',
-  //   imgSrc: './assets/friendly/Monster5.jpg'
-  // },
-  // {
-  //   name: 'Shrek',
-  //   imgSrc: './assets/friendly/Monster5.jpg'
-  // },
-  // {
-  //   name: 'Sullivan Monsters inc',
-  //   imgSrc: './assets/friendly/Monster6.jpg'
-  // },
-  // {
-  //   name: 'Sullivan Monsters inc',
-  //   imgSrc: './assets/friendly/Monster6.jpg'
-  // },
-  // {
-  //   name: 'Little Green Men',
-  //   imgSrc: './assets/friendly/Monster7.jpg'
-  // },
-  // {
-  //   name: 'Little Green Men',
-  //   imgSrc: './assets/friendly/Monster7.jpg'
-  // },
-  // {
-  //   name: 'Mike Monsters Inc',
-  //   imgSrc: './assets/friendly/Monster8.jpg'
-  // },
-  // {
-  //   name: 'Mike Monsters Inc',
-  //   imgSrc: './assets/friendly/Monster8.jpg'
-  // },
-  // {
-  //   name: 'Pink Dragon',
-  //   imgSrc: './assets/friendly/Monster9.jpg'
-  // },
-  // {
-  //   name: 'Pink Dragon',
-  //   imgSrc: './assets/friendly/Monster9.jpg'
-  // },
+  {
+    name: 'Toothless The Dragon',
+    imgSrc: './assets/friendly/Monster3.jpg'
+  },
+  {
+    name: 'Toothless The Dragon',
+    imgSrc: './assets/friendly/Monster3.jpg'
+  },
+  {
+    name: 'Casper the Ghost',
+    imgSrc: './assets/friendly/Monster4.jpg'
+  },
+  {
+    name: 'Casper the Ghost',
+    imgSrc: './assets/friendly/Monster4.jpg'
+  },
+  {
+    name: 'Shrek',
+    imgSrc: './assets/friendly/Monster5.jpg'
+  },
+  {
+    name: 'Shrek',
+    imgSrc: './assets/friendly/Monster5.jpg'
+  },
+  {
+    name: 'Sullivan Monsters inc',
+    imgSrc: './assets/friendly/Monster6.jpg'
+  },
+  {
+    name: 'Sullivan Monsters inc',
+    imgSrc: './assets/friendly/Monster6.jpg'
+  },
+  {
+    name: 'Little Green Men',
+    imgSrc: './assets/friendly/Monster7.jpg'
+  },
+  {
+    name: 'Little Green Men',
+    imgSrc: './assets/friendly/Monster7.jpg'
+  },
+  {
+    name: 'Mike Monsters Inc',
+    imgSrc: './assets/friendly/Monster8.jpg'
+  },
+  {
+    name: 'Mike Monsters Inc',
+    imgSrc: './assets/friendly/Monster8.jpg'
+  },
+  {
+    name: 'Pink Dragon',
+    imgSrc: './assets/friendly/Monster9.jpg'
+  },
+  {
+    name: 'Pink Dragon',
+    imgSrc: './assets/friendly/Monster9.jpg'
+  },
 ]
+
+//Stretch Goal #4 - Different modes: easy, normal and hard
+// app.difficultyLevelChosen = () => {
+//   app.cardsArray = app.cardsArray.slice();
+// }
+
+//Stretch Goal #5 - Make cards keyboard accessible

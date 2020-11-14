@@ -57,14 +57,10 @@
     }
 
     button {
-        border-radius: 10px;
-        padding: 5px 10px;
-        margin: 10px;
         background-color: $lightTeal;
         border: 2px solid $lightTeal;
         color: $navy;
-        font-size: 1.8rem;
-        cursor: pointer;
+        margin: 0 auto;
 
         a {
             color: $navy;

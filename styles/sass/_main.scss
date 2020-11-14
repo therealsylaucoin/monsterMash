@@ -1,11 +1,10 @@
 //menu (4 x 4 square) section
 .menu {
     padding-top: 60px;
-    height: calc(80vh - 35px);
     width: fit-content;
     text-align: center;
     margin: 0 auto;
-    
+    padding-bottom: 100px;
 
     .info {
         margin: 10px;
@@ -89,7 +88,7 @@
                 height: 100%;
                 z-index: 10;
                 position: absolute;
-                top: -1000px;
+                top: -10000px;
                 background-color: white;
                 color: $black;
                 font-size: 1.8rem;
@@ -180,7 +179,7 @@
 
 
 .song {
-    margin: 50px;
+    margin: 50px 0;
     text-align: center;
 
     audio {
