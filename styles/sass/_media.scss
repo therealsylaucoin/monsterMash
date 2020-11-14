@@ -1,3 +1,6 @@
+//remove hovers
+// (hover: none) 
+
 //Tablet 
 @media (max-width: 768px) {
     .desktop {
@@ -47,7 +50,19 @@
     }
 
     .gameBoard {
-        padding: 0 0 20px 0;
+        padding: 10px;
+
+        .board {
+
+            img {
+                border: none;
+            }
+
+            img:hover,
+            img:focus {
+                border: none;
+            }
+        }
     }
 }
 
@@ -144,7 +159,15 @@
             }
         }
     }
- 
+
+    .song {
+
+        audio {
+            border: none;
+        }
+
+    }
+
 }
 
 @media (max-width: 507px) {
