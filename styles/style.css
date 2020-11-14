@@ -570,7 +570,6 @@ footer a {
   border-radius: 10px;
   z-index: 20;
   text-align: center;
-  display: none;
   position: absolute;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -803,5 +802,11 @@ footer a {
   .gameBoard .board img {
     min-height: 100px;
     min-width: 75px;
+  }
+}
+
+@media (max-width: 400px) {
+  .gameBoard .playAgain {
+    padding: 10px;
   }
 }
