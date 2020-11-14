@@ -41,7 +41,7 @@
 
                         <h2>The Monsters</h2>
 
-                        <p class="details first">The monsters featured on the cards are from the <span class="attributions">Universal Classic Monsters collection</span> (1920s through the 1950s) and from modern times animated films. The monster icons are by <span class="attributions">iconcheese from the Noun Project</span>. </p>
+                        <p class="details first" tabindex="0">The monsters featured on the cards are from the <span class="attributions">Universal Classic Monsters collection</span>and from modern times animated films. The monster icons are by <span class="attributions">iconcheese from the Noun Project.</span></p>
 
                     </li>
 
@@ -49,7 +49,7 @@
                         <span class="letter animate__animated animate__bounceIn">A</span>
                         <h2>About</h2>
 
-                        <p class="details">This game was inspired by my love of monsters, vintage cinema and of course, the ultimate banger, Monster Mash.</p>
+                        <p class="details" tabindex="0">This game was inspired by my love of monsters, vintage cinema and of course, the ultimate banger, Monster Mash.</p>
                     </li>
 
                 </div>
@@ -61,8 +61,8 @@
                         <span class="letter animate__animated animate__bounceIn">S</span>
                         <h2>Start!</h2>
 
-                        <div class="details">
-                            <p>Are you ready to start mashing?</p>
+                        <div class="details" tabindex="0">
+                            <p>Are you ready to start mashing monsters!? Hit the MASH button. Monsters will apear and the mash will begin!</p>
                             <button class="start"><a href="#start">MASH!</a></button>
                         </div>
 
@@ -73,7 +73,7 @@
                         <span class="letter animate__animated animate__bounceIn">H</span>
                         <h2>How to play</h2>
 
-                        <p class="details last">Click on the cards to make pairs, until there are no more cards on the board! Need a little extra motivation? Be sure to click on the speaker icon to listen to the Monster Mash!</p>
+                        <p class="details last" tabindex="0">Click on the cards to make pairs. Once all matches have been found, you win! Try again to beat your move count. <br> This game is currently not keyboard accessible.</p>
 
                     </li>
 
@@ -91,7 +91,7 @@
                 <button class="level" value="hard">Hard</button> -->
 
                 <!-- Score container -->
-                <p class="score">Moves So Far: <span class="currentScore">0</span></p>
+                <p class="score"><span class="creepyFont">Moves : </span><span class="currentScore creepyFont"> 0</span></p>
 
                 <!-- The game board whewre all the cards will be -->
                 <div class="board" id="start"></div>
@@ -101,12 +101,20 @@
 
                 <!-- Box that displays the win! -->
                 <div class="playAgain">
-                    <p>All the monsters have been mashed! You win!</p>
+                    <p>All the <span class="creepyFont">monsters</span> have been <span class="creepyFont">mashed!<br>You win!</p></span>
                     <p class="ScoreResult">You won in <span class="currentScore">0</span> moves!</p>
                     <button>Play again!</button>
                 </div>
+
+                
         
         </section>
+
+        <div class="song">
+            <audio loop controls src="./assets/monsterMash.mp3">
+            Your browser does not support audio.
+            </audio>
+        </div>
 
     </main>
 

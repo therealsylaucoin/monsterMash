@@ -1,19 +1,16 @@
+//Neutral colors
+$black: #0f0a0a;
+$lightWhite: #fbfef9;
+$green: #a6f002;
+
 // Colors! Dark Theme
 $purpleSecondary: #bb00e0;
 $purplePrimary: #500060;
-$green: #a6f002;
-$black: #0f0a0a;
-$background: #0f0a0a;
-$lightWhite: #fbfef9;
 
 //Colors! For Light Theme
-$lightPurple: #6E9EEB;
-$lightPurpleSecondary: #f55d3e;
-$lightPurplePrimary: #f7cb15;
-$black: #0f0a0a;
-$lightBackground: #FBFEF9;
-$lightBlue:#f55d3e;
-$navy: #022f40;
+$lightBlue: #4482E5;
+$lightTeal: #50c5b7;
+$navy: #1c3144;
 
 // Font families!
 $monster: 'Creepster', cursive;
@@ -33,7 +30,6 @@ html {
 body {
     font-family: $primary;
     font-size: 2rem;
-    // background-color: $background;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -79,21 +75,30 @@ button {
     border-radius: 10px;
     padding: 5px 10px;
     margin: 10px;
-    background-color: $purplePrimary;
-    border: 2px solid $purplePrimary;
+    background-color: $purpleSecondary;
+    border: 2px solid $purpleSecondary;
     color: $lightWhite;
     font-family: $primary;
     font-weight: 600;
     font-size: 1.8rem;
     cursor: pointer;
 
+    a {
+        color: white;
+    }
+
     &:hover,
-    &:focus-within {
-        background-color: $purpleSecondary;
-        color: $black;
+    &:focus {
+        background-color: $purplePrimary;
     }
 }
 
 .attributions {
     font-weight: 600;
+}
+
+.creepyFont {
+    font-family: $monster;
+    text-shadow: 2px 0px 0px  $purpleSecondary;
+    font-size: 4rem;
 }

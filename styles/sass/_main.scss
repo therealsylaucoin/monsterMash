@@ -24,7 +24,6 @@
 
         div{
             display: flex;
-            // width: 100%;
 
             .diffBackground {
                 background-color: $green;
@@ -61,7 +60,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            // flex: 1 0 484px;
             width: 242px;
             height: 242px;
             text-align: center;
@@ -69,7 +67,11 @@
             &:hover .details,
             &:focus .details,
             &:focus-within .details{
-                display: block;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                top: 0;
             }
             &:hover h2,
             &:focus h2 {
@@ -84,11 +86,10 @@
             }
 
             .details {
-                display:none;
                 height: 100%;
                 z-index: 10;
                 position: absolute;
-                top: 0;
+                top: -1000px;
                 background-color: white;
                 color: $black;
                 font-size: 1.8rem;
@@ -96,11 +97,6 @@
                 line-height: 1.3;
                 text-align: left;
                 font-weight: 400;
-
-                &:focus,
-                &:focus-within {
-                    display: block;
-                }
             }
 
             .first{
@@ -113,6 +109,7 @@
         }
     }
 }
+
 
 //Game board section
 .gameBoard {
@@ -132,15 +129,10 @@
 
         .board {
             margin: 0 auto;
-            // width: calc(80vw + (2.5px * 6));
-            // height: 85vh;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            // display: grid;
-            // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-            // grid-template-rows: 1fr 1fr 1fr;
 
             img {
                 border-radius: 10px;
@@ -169,6 +161,7 @@
     .playAgain {
         width: fit-content;
         padding: 50px;
+        font-size: 2.5rem;
     }
 
     .matchMessage,
@@ -185,3 +178,14 @@
     }
 }
 
+
+.song {
+    margin: 50px;
+    text-align: center;
+
+    audio {
+        background-color: $purpleSecondary; 
+        border: 2px solid $purpleSecondary;
+        border-radius: 20px;
+    }
+}

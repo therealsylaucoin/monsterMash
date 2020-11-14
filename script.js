@@ -39,6 +39,8 @@ $('.modeSwitch').on('click', function(){
   //Clear the moves counter and redisplay it on the page (zero)
   app.score = 0;
   $('.currentScore').text(app.score);
+  //Show the score counter
+  $('.score').show();
   //empty the board
   $('.board').empty();
   //hide play again message, since we're refreshign the board
@@ -220,6 +222,9 @@ app.init = function() {
   $('.start').on('click', function(){
     //call the mix card function!
     app.mixCards();
+    //play the Monster Mash!
+    $('audio').get(0).play();
+    $('audio').get(0).volume = 0.1;
   })
 }
 

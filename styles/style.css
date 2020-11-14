@@ -292,8 +292,8 @@ button {
   border-radius: 10px;
   padding: 5px 10px;
   margin: 10px;
-  background-color: #500060;
-  border: 2px solid #500060;
+  background-color: #bb00e0;
+  border: 2px solid #bb00e0;
   color: #fbfef9;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
@@ -301,13 +301,22 @@ button {
   cursor: pointer;
 }
 
-button:hover, button:focus-within {
-  background-color: #bb00e0;
-  color: #0f0a0a;
+button a {
+  color: white;
+}
+
+button:hover, button:focus {
+  background-color: #500060;
 }
 
 .attributions {
   font-weight: 600;
+}
+
+.creepyFont {
+  font-family: "Creepster", cursive;
+  text-shadow: 2px 0px 0px #bb00e0;
+  font-size: 4rem;
 }
 
 header {
@@ -435,7 +444,20 @@ footer a {
 .menu ul li:hover .details,
 .menu ul li:focus .details,
 .menu ul li:focus-within .details {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
 }
 
 .menu ul li:hover h2,
@@ -451,11 +473,10 @@ footer a {
 }
 
 .menu ul li .details {
-  display: none;
   height: 100%;
   z-index: 10;
   position: absolute;
-  top: 0;
+  top: -1000px;
   background-color: white;
   color: #0f0a0a;
   font-size: 1.8rem;
@@ -463,10 +484,6 @@ footer a {
   line-height: 1.3;
   text-align: left;
   font-weight: 400;
-}
-
-.menu ul li .details:focus, .menu ul li .details:focus-within {
-  display: block;
 }
 
 .menu ul li .first {
@@ -543,6 +560,7 @@ footer a {
   width: -moz-fit-content;
   width: fit-content;
   padding: 50px;
+  font-size: 2.5rem;
 }
 
 .gameBoard .matchMessage,
@@ -559,10 +577,21 @@ footer a {
   top: 50%;
 }
 
+.song {
+  margin: 50px;
+  text-align: center;
+}
+
+.song audio {
+  background-color: #bb00e0;
+  border: 2px solid #bb00e0;
+  border-radius: 20px;
+}
+
 .lightMode {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5))), url(../assets/friendlyBackground.jpg);
   background-image: linear-gradient(rgba(255, 255, 255, 0.5)), url(../assets/friendlyBackground.jpg);
-  color: #022f40;
+  color: #1c3144;
 }
 
 .lightMode .scary {
@@ -574,13 +603,13 @@ footer a {
 }
 
 .lightMode h1 {
-  color: #6E9EEB;
-  text-shadow: 3px 0px 0px #f55d3e;
+  color: #4482E5;
+  text-shadow: 3px 0px 0px #50c5b7;
 }
 
 .lightMode .menu ul {
-  border: 4px solid #f55d3e;
-  background-color: #f7cb15;
+  border: 4px solid #50c5b7;
+  background-color: #a6f002;
 }
 
 .lightMode .menu ul div li {
@@ -588,42 +617,61 @@ footer a {
 }
 
 .lightMode .menu ul div .letter {
-  color: #6E9EEB;
-  text-shadow: 3px 0px 0px #f55d3e;
+  color: #4482E5;
+  text-shadow: 3px 0px 0px #50c5b7;
 }
 
 .lightMode .menu ul div .diffBackground {
-  background-color: #6E9EEB;
+  background-color: #4482E5;
 }
 
 .lightMode .menu ul div .diffBackground .letter {
-  color: #f7cb15;
+  color: #a6f002;
 }
 
-.lightMode .menu ul div .diffBackground h2 {
-  color: #fbfef9;
+.lightMode .menu ul div .details {
+  color: #1c3144;
+}
+
+.lightMode .gameBoard {
+  color: #1c3144;
+}
+
+.lightMode .matchMessage,
+.lightMode .playAgain {
+  border: 4px solid #50c5b7;
 }
 
 .lightMode button {
   border-radius: 10px;
   padding: 5px 10px;
   margin: 10px;
-  background-color: #f7cb15;
-  border: 2px solid #f7cb15;
-  color: #0f0a0a;
+  background-color: #50c5b7;
+  border: 2px solid #50c5b7;
+  color: #1c3144;
   font-size: 1.8rem;
   cursor: pointer;
 }
 
+.lightMode button a {
+  color: #1c3144;
+}
+
 .lightMode button:hover, .lightMode buttonfocus {
-  background-color: #f55d3e;
-  color: #0f0a0a;
+  background-color: #4482E5;
+  color: #1c3144;
+}
+
+.lightMode audio {
+  background-color: #50c5b7;
+  border: 2px solid #50c5b7;
+  border-radius: 20px;
+}
+
+.lightMode .creepyFont {
+  text-shadow: 2px 0px 0px #50c5b7;
 }
 
 .lightMode footer a {
-  color: #6E9EEB;
-}
-
-.lightMode .gameBoard .gameContainer .board img:hover {
-  border: 4px solid #f55d3e;
+  color: #4482E5;
 }
