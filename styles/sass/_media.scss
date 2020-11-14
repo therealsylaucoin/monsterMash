@@ -1,5 +1,13 @@
-//remove hovers
-// (hover: none) 
+@media (hover: hover) {
+    .gameBoard {
+                img {
+                    &:hover,
+                    &:focus {
+                        border: 4px solid $green;
+                    }
+        }
+    }
+}
 
 //Tablet - ipad pro
 @media only screen and (max-width: 1366px) {
@@ -53,14 +61,7 @@
         padding: 10px;
 
         .board {
-
             img {
-                border: none;
-            }
-
-            img:hover,
-            img:focus,
-            img:focus-within {
                 border: none;
             }
         }
