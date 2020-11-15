@@ -61,10 +61,13 @@ app.mixCards = function() {
   //clear the score
   app.score = 0;
   $('.currentScore').text(app.score);
+  //show score
+  $('.score').show();
+  //hide play again
+  $('.playAgain').hide();
   //Call the create board function inside here, because we want to create the board with the mixed array
   app.createBoard();
 };
-
 
 //3. Creat a function to create and append the cards to the html board. 
 //For each object in the array:
@@ -84,30 +87,16 @@ app.createBoard = function() {
             //set alt text for images as the card name
             .attr('alt', app.cardsArray[i].name)
             //add a class of unmatched (which will be removed as the player makes pairs to check if match is won)
-            .addClass('unmatched')
-            //5. add an event listener that will call the flip card function
-            .on('click', function() {
-                //push the cards into the twoCardsSelectedByPlayer array so that we can compare them
-                app.twoCardsSelectedByPlayer.push($(this));
-                //4. call the flipCard function
-                app.flipCard($(this));
-            })
-
-            .keypress(function(){
-              //push the cards into the twoCardsSelectedByPlayer array so that we can compare them
-              app.twoCardsSelectedByPlayer.push($(this));
-              //4. call the flipCard function
-              app.flipCard($(this));
-            })
-
+            .addClass('unmatched');
+        //5. add an event listener that will call the flip card function
+        app.addEventListener('click', app.card);
+        app.addEventListener('keypress', app.card);
         //append the cards to the board!
         $('.board').append(app.card);
         //show the board!
         $('.gameBoard').css('visibility', 'visible');
     };
 };
-
-
 
 //4. Create a flip card function that will:
 app.flipCard = function(card) {
@@ -117,12 +106,14 @@ app.flipCard = function(card) {
       card.attr('src', app.cardsArray[cardIndex].imgSrc)
         //if there are 2 cards in the twoCardsSelectedByPlayer array, run the checkIfPlayerHasMatch function on that array
         if (app.twoCardsSelectedByPlayer.length == 2) {
-            app.checkIfPlayerHasMatch(app.twoCardsSelectedByPlayer);
+          app.checkIfPlayerHasMatch(app.twoCardsSelectedByPlayer);
     };
 };
 
 // 6. Create a check match function that will:
 app.checkIfPlayerHasMatch = function (arrayOfTwoClickedCards){
+  //Remove event listener so that no more than 2 cards can be flipped
+    $('img').off('click');
     //Stretch Goal #3 -  Have a move counter to count how many clicks it takes the player to complete
     //add to score
     app.score = app.score+=1;
@@ -149,8 +140,20 @@ app.checkIfPlayerHasMatch = function (arrayOfTwoClickedCards){
       // 7. Alert the player that they won by displaying the play again div
       $('.playAgain').show()
     }
-  }, 800);
+    //Add the event listener back by calling the addEventListener function so that the user can keep fliping!
+    app.addEventListener('click', $('img'));
+  }, 1000);
 };
+
+//create a function to add event listeners since we're gonna do that a few times in our app!
+app.addEventListener = function(e, onWhat){
+  onWhat.on(e, function() {
+    //push the cards into the twoCardsSelectedByPlayer array so that we can compare them
+    app.twoCardsSelectedByPlayer.push($(this));
+    //4. call the flipCard function
+    app.flipCard($(this));
+  })
+}
 
 //6.a - continued (from above)
 //Create a function that will let the player know that they must select different cards, remove class selected, flip the card back and empty the twoCardsSelectedByPlayer array
@@ -216,8 +219,6 @@ $('.playAgain').on('click', function(){
   //call the mixCards function
   app.mixCards();
   //hide button again
-  $('.playAgain').hide();
-  $('.score').show();
 });
 
 //8. Create event listener to show level buttons on click of MASH
