@@ -79,7 +79,6 @@ app.createBoard = function() {
             .attr('data-name', app.cardsArray[i].name)
             //add the index from the array
             .attr('data-id', i)
-            //**Note to the reviewer - I added the tab index in hope to make the card game accessible by keyboard. I was unsuccessful with a few different attempts (keyDown, onclick="handleBtnClick()" onKeyDown="handleBtnKeyDown() and more.) Any accessible feedback and tips around this type of app/games is welcome! Thank you!
             //add a tab index
             .attr('tabindex', 0)
             //set alt text for images as the card name
@@ -93,12 +92,22 @@ app.createBoard = function() {
                 //4. call the flipCard function
                 app.flipCard($(this));
             })
+
+            .keypress(function(){
+              //push the cards into the twoCardsSelectedByPlayer array so that we can compare them
+              app.twoCardsSelectedByPlayer.push($(this));
+              //4. call the flipCard function
+              app.flipCard($(this));
+            })
+
         //append the cards to the board!
         $('.board').append(app.card);
         //show the board!
         $('.gameBoard').css('visibility', 'visible');
     };
 };
+
+
 
 //4. Create a flip card function that will:
 app.flipCard = function(card) {
@@ -388,5 +397,3 @@ app.cardsArrayFriendly = [
     imgSrc: './assets/friendly/Monster9.jpg'
   },
 ]
-
-//Stretch Goal #5 - Make cards keyboard accessible
