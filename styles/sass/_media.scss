@@ -109,16 +109,12 @@
             }
 
             li {
-                .details {
-                    border-radius: none;
-                }
-
                 .first {
                     border-radius: 6px 6px 0 0;
                 }
 
                 .last {
-                    border-radius: 0 0 6px 6px;
+                        border-radius: 0 0 6px 6px;
                 }
 
                 .letter:last-of-type {
@@ -129,11 +125,20 @@
                     background-color: $green; 
                 }
             }
+
+            .green {
+                border-radius: 0 0 6px 6px;
+            }
         
         }
         div {
             flex-direction: column;
         }
+    }
+
+    .chooseLevel {
+        flex-direction: column;
+        align-items: center;
     }
 
     //lightMode!

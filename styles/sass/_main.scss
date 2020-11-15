@@ -1,10 +1,9 @@
 //menu (4 x 4 square) section
 .menu {
-    padding-top: 60px;
+    padding: 60px 0;
     width: fit-content;
     text-align: center;
     margin: 0 auto;
-    padding-bottom: 100px;
 
     .info {
         margin: 10px;
@@ -121,8 +120,6 @@
     }
 }
 
-
-
 //Game board section
 .gameBoard {
     visibility: hidden;
@@ -183,7 +180,6 @@
         top: 50%;
     }
 }
-
 
 .song {
     margin: 50px 0;

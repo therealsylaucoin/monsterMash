@@ -63,7 +63,6 @@ app.mixCards = function() {
   $('.currentScore').text(app.score);
   //Call the create board function inside here, because we want to create the board with the mixed array
   app.createBoard();
-  console.log('calling mix cards');
 };
 
 
