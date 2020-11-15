@@ -485,7 +485,7 @@ footer a {
   font-size: 1.8rem;
   opacity: 0.95;
   line-height: 1.3;
-  text-align: left;
+  text-align: center;
   font-weight: 400;
 }
 
@@ -731,7 +731,6 @@ footer a {
     text-shadow: 3px 0px 0px #bb00e0;
   }
   .menu ul li .details {
-    text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
