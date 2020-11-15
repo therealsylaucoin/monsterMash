@@ -209,6 +209,7 @@ $('.playAgain').on('click', function(){
   app.mixCards();
   //hide button again
   $('.playAgain').hide();
+  $('.score').show();
 });
 
 //8. Create event listener to show level buttons on click of MASH
