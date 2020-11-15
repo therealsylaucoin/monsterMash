@@ -6,12 +6,13 @@ app.twoCardsSelectedByPlayer = [];
 app.card ;
 app.cardBack ;
 app.score = 0;
+app.level ;
 
 // 1. Create an array of cards for each mode (scary and friendly)
 //moved arrays to bottom of code because they are very long :sweat-smile:
 
 //Variable to hold the array that we will use once the user chooses their mode
-app.CardsArray ;
+app.cardsArray ;
 
 // Stretch Goal #2 - Have a light mode where the cards are friendly monsters, because monsters are scary.
 //2. Create a Function to determine with of the two arrays will be used (scary or friendly)
@@ -32,27 +33,20 @@ $('.modeSwitch').on('click', function(){
     .toggleClass('lightMode')
     .toggleClass('friendly');
 
-  $('.letter').toggleClass('animate__bounceIn');
-  $('.letter').toggleClass('animate__tada');
-  //Call the function that choses the array based on the mode
-  app.userChoosesBetweenScaryOrFriendly();
-  //Clear the moves counter and redisplay it on the page (zero)
-  app.score = 0;
-  $('.currentScore').text(app.score);
-  //Show the score counter
-  $('.score').show();
-  //empty the board
-  $('.board').empty();
-  //hide play again message, since we're refreshign the board
-  $('.playAgain').hide();
-  //Call the create board function inside here, because we want to create the board with the mixed array
+  $('.letter').toggleClass('animate__bounceIn animate__tada');
+  //display the level picker 
+  $('.chooseLevel').css('visibility', 'visible');
+  //Call the mixCards function!
   app.mixCards();
 })
 
 //Stretch goal #1 - Randomize array. I'm using the Fisher-Yates method here:
-app.mixCards = () => {
+app.mixCards = function() {
   //Call the function to get the default array
   app.userChoosesBetweenScaryOrFriendly();
+  //Stretch Goal #4 - Different modes: easy, normal and hard
+  //achieved by storing the level value on click, and passing it in the array slice here
+  app.cardsArray = app.cardsArray.slice(0, app.level);
   //Shuffling:
   let random = 0;
   let temp = 0;
@@ -64,9 +58,14 @@ app.mixCards = () => {
   }
   //empty the board so that the cards don't continuously append
   $('.board').empty()
+  //clear the score
+  app.score = 0;
+  $('.currentScore').text(app.score);
   //Call the create board function inside here, because we want to create the board with the mixed array
   app.createBoard();
+  console.log('calling mix cards');
 };
+
 
 //3. Creat a function to create and append the cards to the html board. 
 //For each object in the array:
@@ -206,20 +205,23 @@ app.playerDoesNotGetMatch = () => {
 
 //7. Creat an event listener on the play again button so that it runs the createBoard function
 $('.playAgain').on('click', function(){
+  //call the mixCards function
   app.mixCards();
   //hide button again
   $('.playAgain').hide();
-  //Show the score counter
-  $('.score').show();
-   //Clear the moves counter and redisplay it on the page (zero)
-  app.score = 0;
-  $('.currentScore').text(app.score);
 });
+
+//8. Create event listener to show level buttons on click of MASH
+$('.start').on('click', function(){
+  $('.chooseLevel').css('visibility', 'visible');
+})
 
 //initialize app!
 app.init = function() {
   //8. Event listener to start the game :)
-  $('.start').on('click', function(){
+  $('.level').on('click', function(){
+    //save the value of level
+    app.level = $(this).val();
     //call the mix card function!
     app.mixCards();
     //play the Monster Mash!
@@ -386,10 +388,5 @@ app.cardsArrayFriendly = [
     imgSrc: './assets/friendly/Monster9.jpg'
   },
 ]
-
-//Stretch Goal #4 - Different modes: easy, normal and hard
-// app.difficultyLevelChosen = () => {
-//   app.cardsArray = app.cardsArray.slice();
-// }
 
 //Stretch Goal #5 - Make cards keyboard accessible

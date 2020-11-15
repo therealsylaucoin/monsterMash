@@ -63,7 +63,12 @@
         .board {
             img {
                 border: none;
+
+                &:focus {
+                    outline: none;
+                }
             }
+
         }
     }
 }

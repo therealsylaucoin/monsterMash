@@ -498,6 +498,23 @@ footer a {
   border-radius: 0 0 6px 0;
 }
 
+.chooseLevel {
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.chooseLevel li {
+  margin: 10px;
+}
+
 .gameBoard {
   visibility: hidden;
   margin: 100px 0;
@@ -737,6 +754,9 @@ footer a {
   }
   .gameBoard .board img {
     border: none;
+  }
+  .gameBoard .board img:focus {
+    outline: none;
   }
 }
 

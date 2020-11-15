@@ -63,8 +63,8 @@
                         <h2>Start!</h2>
 
                         <div class="details" tabindex="0">
-                            <p>Are you ready to start mashing monsters!? Hit the MASH button. Monsters will apear and the mash will begin!</p>
-                            <button class="start"><a href="#start">MASH!</a></button>
+                            <p>Are you ready to start mashing monsters!? Hit the MASH button to choose your level. <strong>Once your level is selected, Monsters will apear and the Mash will begin!</strong></p>
+                            <button class="start"><a href="#chooseLevel">MASH!</a></button>
                         </div>
 
                     </li>
@@ -83,12 +83,25 @@
             </ul>
 
         </section>
+
+        <!-- STRETCH GOAL #4 -->
+        <ul class="chooseLevel" id="chooseLevel">
+
+            <li>
+                <button class="level" value="6">Easy</button>
+            </li>
+
+            <li>
+                <button class="level" value="12">Average</button>
+            </li>
+
+            <li>
+                <button class="level" value="18">Hard</button>
+            </li>
+            
+        </ul>
         
         <section class="gameBoard">
-                <!-- STRETCH GOAL #4 -->
-                <!-- <button class="level" value="easy">Easy</button>
-                <button class="level" value="normal">Normal</button>
-                <button class="level" value="hard">Hard</button> -->
 
                 <!-- Score container -->
                 <p class="score"><span class="creepyFont">Moves : </span><span class="currentScore creepyFont"> 0</span></p>

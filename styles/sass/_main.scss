@@ -109,6 +109,19 @@
     }
 }
 
+.chooseLevel {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+
+    li {
+        margin: 10px;
+    }
+}
+
+
 
 //Game board section
 .gameBoard {
